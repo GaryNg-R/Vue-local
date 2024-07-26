@@ -34,6 +34,7 @@ const characterLength = computed(() => {
 });
 
 const handleDelete = () => {
+  console.log("hanldeDelete????");
   emit("deleteClicked", props.note.id);
 };
 </script>
