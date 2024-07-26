@@ -25,7 +25,7 @@
       </div>
     </div>
     <Note
-      v-for="note in notes"
+      v-for="note in storeNotes.notes"
       :key="note.id"
       :note="note"
       @deleteClicked="deletNote"
@@ -36,6 +36,9 @@
 <script setup>
 import { ref } from "vue";
 import Note from "@/components/Notes/Note.vue";
+import { useStoreNotes } from "@/stores/storeNotes";
+
+const storeNotes = useStoreNotes();
 
 const newNote = ref("");
 const newNoteRef = ref();
