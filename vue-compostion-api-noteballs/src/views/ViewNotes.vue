@@ -44,16 +44,17 @@ const newNote = ref("");
 const newNoteRef = ref();
 
 const addNote = () => {
-  let currentDate = new Date().getTime(),
-    id = currentDate.toString();
+  // let currentDate = new Date().getTime(),
+  //   id = currentDate.toString();
 
-  let note = {
-    id: id,
-    content: newNote.value,
-  };
-  //console.log(note);
-  // notes.value.push(note);
-  notes.value.unshift(note);
+  // let note = {
+  //   id: id,
+  //   content: newNote.value,
+  // };
+  // //console.log(note);
+  // // notes.value.push(note);
+  // notes.value.unshift(note);
+  storeNotes.addNote(newNote.value);
   newNote.value = "";
   newNoteRef.value.focus();
 };
