@@ -7,6 +7,7 @@
             v-model="newNote"
             class="textarea"
             placeholder="Add a new note"
+            ref="newNoteRef"
           />
         </div>
       </div>
@@ -41,6 +42,7 @@
 <script setup>
 import { ref } from "vue";
 const newNote = ref("");
+const newNoteRef = ref();
 const notes = ref([
   {
     id: "id1",
@@ -65,5 +67,6 @@ const addNote = () => {
   // notes.value.push(note);
   notes.value.unshift(note);
   newNote.value = "";
+  newNoteRef.value.focus();
 };
 </script>
