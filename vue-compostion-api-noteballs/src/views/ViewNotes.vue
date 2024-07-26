@@ -42,17 +42,6 @@ const storeNotes = useStoreNotes();
 
 const newNote = ref("");
 const newNoteRef = ref();
-const notes = ref([
-  {
-    id: "id1",
-    content:
-      " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus neciaculis mauris.",
-  },
-  {
-    id: "id2",
-    content: " This is a second note",
-  },
-]);
 
 const addNote = () => {
   let currentDate = new Date().getTime(),
